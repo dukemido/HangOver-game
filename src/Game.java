@@ -23,14 +23,15 @@ public class Game implements IHangMan {
 		}
 		if (solvedWord.indexOf(c) != -1)// the character is found already.
 			System.out.println("This character is already found!");
-		else if (baseKeyword.getKeyword().indexOf(c) == -1)// wrong guess
+		else if (baseKeyword.getKeyword().indexOf(c) == -1
+				&& baseKeyword.getKeyword().indexOf(Character.toLowerCase(c)) == -1)// wrong guess
 		{
 			wrongs++;
 			System.out.println("Wrong guess!");
 		} else {
 			for (int i = 0; i < baseKeyword.getKeyword().length(); i++) {
 				String current = baseKeyword.getKeyword();
-				if (current.charAt(i) == c) {
+				if (Character.toLowerCase(current.charAt(i)) == Character.toLowerCase(c)) {
 					StringBuilder myName = new StringBuilder(solvedWord);
 					myName.setCharAt(i, current.charAt(i));
 					solvedWord = myName.toString();
