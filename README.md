@@ -7,9 +7,10 @@ If you're out of guessings the man hangs himself.
 
 You can add new words in the "words.txt" by adding in the following format "word-clue", they must be split by a '-' and no spaces.
 Example 
-> hello-song by adele
-> piano-a musical instrument
-
+'''
+hello-song by adele
+piano-a musical instrument
+'''
 
 # License
 
