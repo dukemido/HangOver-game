@@ -22,7 +22,7 @@ public class Main {
 				String[] w_info = p.split("-");
 
 				// Create the word and adds it to the List
-				GameKeyword gameWord = new GameKeyword(w_info[0], w_info[1]);
+				new GameKeyword(w_info[0], w_info[1]);
 			}
 			System.out.println("Loaded " + GameKeyword.words.size() + " words in memory.");
 			// Print game rules.
